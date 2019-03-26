@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./App.css";
 
+const BASE_URL = "http://localhost:3005";
+
 class App extends Component {
   constructor() {
     super();
@@ -16,11 +18,10 @@ class App extends Component {
   };
 
   handleClick = () => {
-    axios.get("https://pdqweb.azurewebsites.net/api/brain").then(results => {
+    axios.get(BASE_URL).then(results => {
       console.log(results);
-      console.log();
-      this.setState({ info: results.data });
-    });
+//       this.setState({ info: results.data });
+//     });
   };
 
   render() {
