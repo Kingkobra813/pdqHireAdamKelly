@@ -10,7 +10,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //ENDPOINTS
-// app.get("https://pdqweb.azurewebsites.net/api/brain")
+ app.get("/url", (req, res, next) => {
+  res.json(https://pdqweb.azurewebsites.net/api/brain)
+});
+
 
 const port = process.env.PORT || 3005;
 app.listen(port, () => {
