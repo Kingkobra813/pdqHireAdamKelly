@@ -4,6 +4,11 @@ import "./App.css";
 
 const BASE_URL = "http://localhost:3005";
 
+// I didn't style anything at all. I was short on time and wanted to get you something before you forgot about me.
+// This was the most fun I have had applying for a job. I will contiune working on this after I send it to you.
+// you can check out the repo at https://github.com/Kingkobra813/pdqHireAdamKelly
+// Thanks!!
+
 class App extends Component {
   constructor() {
     super();
