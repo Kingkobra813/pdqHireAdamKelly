@@ -18,10 +18,9 @@ class App extends Component {
   };
 
   handleClick = () => {
-    axios.get(BASE_URL).then(results => {
+    axios.get(BASE_URL + "/api").then(results => {
       console.log(results);
-//       this.setState({ info: results.data });
-//     });
+    });
   };
 
   render() {
