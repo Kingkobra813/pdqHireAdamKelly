@@ -9,9 +9,6 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //ENDPOINTS
-// app.get("/url", (req, res, next) => {
-//   res.send(axios.get("https://swapi.co/api/people/1/"));
-// });
 
 app.get("/api", (req, res) => {
   axios
@@ -21,10 +18,6 @@ app.get("/api", (req, res) => {
       console.log(err);
     });
 });
-
-// app.get("/express_backend", (req, res) => {
-//   res.send({ express: "YOUR EXPRESS BACKEND IS CONNECTED TO REACT" });
-// });
 
 const port = 3005;
 app.listen(port, () => {
