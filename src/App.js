@@ -8,27 +8,34 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      info: []
+      name: "",
+      beer: "",
+      thought: "",
+      dream: ""
     };
   }
-  handleTestClick = () => {
-    axios.get("https://swapi.co/api/people/1/").then(results => {
-      console.log(results.data);
-    });
-  };
 
   handleClick = () => {
     axios.get(BASE_URL + "/api").then(results => {
-      console.log(results);
+      console.log(results.data);
+      this.setState({
+        name: results.data.name,
+        beer: results.data.currentBeer,
+        thought: results.data.currentThought,
+        dream: results.data.daydream
+      });
     });
   };
 
   render() {
     return (
       <div className="App">
+        <h1>Cabalistic Necromancer</h1>
         <button onClick={this.handleClick}> Click to read minds</button>
-        <button onClick={this.handleTestClick}> testing</button>
-        <div>{this.state.info}</div>
+        <div>{this.state.name}</div>
+        <div>{this.state.beer}</div>
+        <div>{this.state.thought}</div>
+        <img src={this.state.dream} />
       </div>
     );
   }
